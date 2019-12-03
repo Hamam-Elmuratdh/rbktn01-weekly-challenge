@@ -93,6 +93,10 @@ Vehicle.prototype.drive = function() {
 }
 var charger = new Vehicle();
 var mustang = new Vehicle();
+charger.drive()
+mustang.drive()
+mustang.drive()
+
 
 
 
@@ -119,13 +123,14 @@ var mustang = new Vehicle();
 
 
 // CODE HERE...
-string.prototype.grammarPolice = function(){
-    var array = this.split()
+String.prototype.grammarPolice = function(){
+    var array = split(' ')
     for ( i = 0; i < array.length; i++){
-        array[i]= array[i]charAt(0).toUpperCase()+ arr[i].slice(1).toLowerCase();
-
+        if (array[i] === " "){
+        array[i]+= array[i].charAt(0).toUpperCase() + arry[i].toLowerCase();
+}
     }
- return arr.join(' ');
+ return array.join(' ');
 }
 
 
@@ -173,7 +178,8 @@ return "Exactly the same";
 // assign it the value of the large function BOUND to the elephant object.
 
 // When boundToElephant gets called, it should return this exact string:
-// 'My name is Horton and I am very heavy!' (The above instructions should make this work.  No code needed for this paragraph)
+// 'My name is Horton and I am very heavy!' (The above instructions should make this work.
+ // No code needed for this paragraph)
 
 var elephant = {
     name: 'Horton'
@@ -183,6 +189,7 @@ function large() {
     return 'My name is ' + this.name + ' and I am very heavy!'
 }
   // CODE HERE...
+  var boundToElephant = large.bind(elephant)
 
 // *************
 // * PROBLEM 6 *
@@ -195,6 +202,15 @@ function large() {
 // and return the bound function.
 
 // CODE HERE...
+function deathStar(capacity,crew){
+return capacity.bind(crew)
+}
+
+
+
+
+
+
 
 
 // *************
@@ -209,3 +225,10 @@ function large() {
 // The closure function will return the combined value of assets and liabilities.
 
 // CODE HERE...
+function accountingOffice(assets){
+    return closure;
+function closure(liabilities){
+    return assets + liabilities;
+}
+
+}
